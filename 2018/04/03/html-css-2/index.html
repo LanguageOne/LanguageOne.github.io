@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/04/03/html-css-2/image/html-css-2-1.png">
 <meta property="og:image" content="http://yoursite.com/2018/04/03/html-css-2/image/html-css-2-2.png">
 <meta property="og:image" content="http://yoursite.com/2018/04/03/html-css-2/image/html-css-2-3.png">
-<meta property="og:updated_time" content="2018-04-03T04:36:32.035Z">
+<meta property="og:updated_time" content="2018-04-17T01:18:44.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html-css-2">
 <meta name="twitter:description" content="基本用法1. 直接放在标签的style属性中12&amp;lt;span style=&amp;quot;color:red:&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;div style=&amp;quot;border:sold 1px blue;width:200px;height:200px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;">
@@ -189,7 +189,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            Startseite
           </a>
         </li>
       
@@ -199,7 +199,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            A propos
+            Über
           </a>
         </li>
       
@@ -219,7 +219,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -229,7 +229,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -293,7 +293,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T11:08:35+08:00">
                 2018-04-03
@@ -341,14 +341,14 @@
 <p>上列中p和div中的class是不同的，这是标签加类选择器的应用。<br></p>
 <h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#font18px&#123; font-size:18px;&#125;</span><br><span class="line">&lt;p id=&quot;font18px&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">span&#123;font-size:12px;&#125;</span><br><span class="line">div&gt;span&#123;font-size:16px;&#125;</span><br><span class="line">div&gt;.font24px&#123;font-size:20px;&#125;</span><br><span class="line">#box&gt;.font24px&#123;font-size:24px;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div id=&quot;box&quot;&gt;&lt;span class=&quot;font24px&quot;&gt;The frist test&lt;/span&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;&lt;span class=&quot;font24px&quot;&gt; The scenod test&lt;/span&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;&lt;span&gt; Finally &lt;/span&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/04/03/html-css-2/image/html-css-2-1.png" alt="结果"><br></p>
+<p><img src="/2018/04/03/html-css-2/image/html-css-2-1.png"></p>
 <h3 id="相邻选择器"><a href="#相邻选择器" class="headerlink" title="相邻选择器"></a>相邻选择器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">h2&#123;font-size:12px;&#125;</span><br><span class="line">h2+div&#123;font-size:16px;&#125;</span><br><span class="line">div+p&#123;font-size:20px;&#125;</span><br><span class="line">p+.class1&#123;font-size:24px;&#125;</span><br><span class="line">.class1+div&#123;font-size:28px;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;h2&gt;内容&lt;/h2&gt;</span><br><span class="line">&lt;div&gt;相邻选择器使用“+”标识相邻选择符&lt;/div&gt;</span><br><span class="line">&lt;p&gt;用来定义“+”后面相邻的元素样式&lt;/p&gt;</span><br><span class="line">&lt;div class=&quot;class1&quot;&gt;可以使用class或者id属性进行控制&lt;/div&gt;</span><br><span class="line">&lt;div&gt;相邻选择器在IE6及其以下的版本也不被支持&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p><br><img src="/2018/04/03/html-css-2/image/html-css-2-2.png" alt=""></p>
+<p><img src="/2018/04/03/html-css-2/image/html-css-2-2.png"></p>
 <h3 id="包含选择器与多层选择器嵌套"><a href="#包含选择器与多层选择器嵌套" class="headerlink" title="包含选择器与多层选择器嵌套"></a>包含选择器与多层选择器嵌套</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#wrap #header p&#123;font-size:14px&#125;</span><br><span class="line">#wrap #main h2 span&#123;font-size:18px&#125;</span><br><span class="line">&lt;div id=&quot;wrap&quot;&gt;</span><br><span class="line">	&lt;div id=&quot;header&quot;&gt;</span><br><span class="line">	   &lt;div&gt;</span><br><span class="line">	       &lt;p&gt; information &lt;/p&gt;</span><br><span class="line">	   &lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;main&quot;&gt;</span><br><span class="line">        &lt;h2&gt;&lt;span&gt;这是可以的被定义的&lt;/span&gt;&lt;/h2&gt;</span><br><span class="line">        &lt;span&gt;这里不会使用style&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="伪选择器和伪元素选择器"><a href="#伪选择器和伪元素选择器" class="headerlink" title="伪选择器和伪元素选择器"></a>伪选择器和伪元素选择器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">a:link&#123;color:#FF0000;&#125;  /*正常状态下样式*/</span><br><span class="line">a:visited&#123;color:#00FF00;&#125;  /*被访问之后的样式*/</span><br><span class="line">a:hover&#123;color:#0000FF;&#125;  /*鼠标经过时的样式*/</span><br><span class="line">a:active&#123;color:#FF00FF;&#125;  /*单击被激活是的样式*/</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <p>如果在“：”之前不加标签，在浏览器中浏览时所有的元素都会被定义为4种状态样式。<br></p>
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">body &#123; background:url(image/1.jpg) no-repeat; height:100%; width:100%;&#125;</span><br><span class="line">#wrap &#123; position:absolute; width:249px; height:249px; z-index:1; left:712px; top:201px;&#125;</span><br><span class="line">#wrap ul &#123; list-style-type:none; margin:0; padding:0; font-szie:12px; color:#777;&#125;</span><br><span class="line">#wrap li &#123; background:url(image/2.jpg) no-repeat 2px 10px; padding: 1px 0px 0px 28px; line-height:30px;&#125;</span><br><span class="line">#wrap li a&#123; text-decoration:none; color:#777;&#125;</span><br><span class="line">#wrap li a:hover&#123;color:#F63;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;ul id=&quot;container&quot;&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;http://live.bilibili.com/32269&quot;&gt;one&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;two&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;three&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;four&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;five&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;six&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;seven&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	   &lt;li&gt;&lt;a herf=&quot;#&quot;&gt;eight&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	 &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/04/03/html-css-2/image/html-css-2-3.png" alt=""></p>
+<p><img src="/2018/04/03/html-css-2/image/html-css-2-3.png"></p>
 
       
     </div>
@@ -445,10 +445,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -472,8 +472,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
-                  <span class="site-state-item-name">articles</span>
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -486,7 +486,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             
@@ -558,7 +558,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -566,7 +566,7 @@
 
 
 
-  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
