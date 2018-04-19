@@ -1093,7 +1093,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: transparent;
+  background: url("https://i0.hdslb.com/bfs/article/277a629ae053511065e3f8f9fdbfad489a5a2672.png");
 }
 .header-inner {
   position: relative;
@@ -1825,7 +1825,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ccc432;
+  background: #fdf;
 }
 .links-of-blogroll {
   font-size: 13px;
