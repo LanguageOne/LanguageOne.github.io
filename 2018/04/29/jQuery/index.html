@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="just something for nothing">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/04/29/jQuery/1.png">
-<meta property="og:updated_time" content="2018-04-29T04:21:57.870Z">
+<meta property="og:updated_time" content="2018-05-07T00:56:12.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery Mobile创建的第一个网页">
 <meta name="twitter:image" content="http://yoursite.com/2018/04/29/jQuery/1.png">
@@ -218,11 +218,59 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -320,7 +368,7 @@
       
         <p><img src="/2018/04/29/jQuery/1.png"><br></p>
 <a id="more"></a>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>jQuery Mobile创建的第一个网页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!--引用jQuery Mobile函数库 应用ThemeRoller制作的样式--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"themes/mytheme.min.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-1.7.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--优化屏幕宽度--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-id">#content</span>&#123;<span class="attribute">text-align</span>:center;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"page"</span> <span class="attr">data-title</span>=<span class="string">"课程"</span> <span class="attr">id</span>=<span class="string">"first"</span> <span class="attr">data-theme</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">h1</span>&gt;</span>课程<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"content"</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">ul</span> <span class="attr">data-role</span>=<span class="string">"listview"</span> <span class="attr">data-inset</span>=<span class="string">"true"</span>&gt;</span>		</span><br><span class="line">truetruetruetrue<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"chinese.htm"</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/chinese.jpg"</span> /&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>语文<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间：星期一 人数：15人<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ui-li-count"</span>&gt;</span>12<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#taking"</span> <span class="attr">data-icon</span>=<span class="string">"gear"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>			</span><br><span class="line">truetruetruetrue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetrue<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"math.htm"</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/math.jpg"</span> /&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>数学<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间：星期三 人数：20人<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ui-li-count"</span>&gt;</span>18<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#taking"</span> <span class="attr">data-icon</span>=<span class="string">"gear"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>			</span><br><span class="line">truetruetruetrue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetrue<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"english.htm"</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/english.jpg"</span> /&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>英语<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间：星期五 人数：30人<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ui-li-count"</span>&gt;</span>20<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#taking"</span> <span class="attr">data-icon</span>=<span class="string">"gear"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>			</span><br><span class="line">truetruetruetrue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"footer"</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">h4</span>&gt;</span>页脚<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">true</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>jQuery Mobile创建的第一个网页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!--引用jQuery Mobile函数库 应用ThemeRoller制作的样式--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"themes/mytheme.min.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-1.7.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--优化屏幕宽度--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-id">#content</span>&#123;<span class="attribute">text-align</span>:center;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"page"</span> <span class="attr">data-title</span>=<span class="string">"课程"</span> <span class="attr">id</span>=<span class="string">"first"</span> <span class="attr">data-theme</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">h1</span>&gt;</span>课程<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"content"</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">ul</span> <span class="attr">data-role</span>=<span class="string">"listview"</span> <span class="attr">data-inset</span>=<span class="string">"true"</span>&gt;</span>		</span><br><span class="line">truetruetruetrue<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"chinese.htm"</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/chinese.jpg"</span> /&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>语文<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间：星期一 人数：15人<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ui-li-count"</span>&gt;</span>12<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#taking"</span> <span class="attr">data-icon</span>=<span class="string">"gear"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>			</span><br><span class="line">truetruetruetrue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetrue<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"math.htm"</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/math.jpg"</span> /&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>数学<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间：星期三 人数：20人<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ui-li-count"</span>&gt;</span>18<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#taking"</span> <span class="attr">data-icon</span>=<span class="string">"gear"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>			</span><br><span class="line">truetruetruetrue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetrue<span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"english.htm"</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/english.jpg"</span> /&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>英语<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">p</span>&gt;</span>时间：星期五 人数：30人<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">truetruetruetruetrue  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ui-li-count"</span>&gt;</span>20<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">truetruetruetruetrue<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#taking"</span> <span class="attr">data-icon</span>=<span class="string">"gear"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>			</span><br><span class="line">truetruetruetrue<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">data-role</span>=<span class="string">"footer"</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">h4</span>&gt;</span>页脚<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -353,6 +401,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/07/app-1/" rel="prev" title="使用H5写手机app">
+                使用H5写手机app <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -424,7 +476,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -437,7 +489,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -647,7 +699,337 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
 
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
