@@ -1,29 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 
 
 
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+  .pace .pace-progress {
+    background: #f8b6bf; /*进度条颜色*/
+    height: 3px;
+  }
+  .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #f8b6bf, 0 0 5px #f8b6bf; /*阴影颜色*/
+  }
+  .pace .pace-activity {
+    border-top-color: #f8b6bf;    /*上边框颜色*/
+    border-left-color: #f8b6bf;    /*左边框颜色*/
+  }
+</style>
 
 
 
@@ -50,22 +56,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="html-css," />
@@ -73,6 +64,11 @@
 
 
 
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
@@ -98,12 +94,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: true,
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -126,29 +120,49 @@
 
 
 
-  <title>tab页面 | just something for nothing</title>
-  
-
-
-
-
-
-
-
-
+     <title> tab页面 | just something for nothing </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?71ddec12fb1172387f0bd6399e834274";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
   
     
   
-
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="bg_content">
+    <div class="filter"></div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <a href="https://github.com/sunshine940326"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -191,8 +205,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -201,8 +225,18 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -211,12 +245,32 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-life">
+          <a href="/life" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
             
-            归档
+            留言板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photo">
+          <a href="/photo" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-image"></i> <br />
+            
+            照片
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-book">
+          <a href="/categories/book-movie-music" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            书影音
           </a>
         </li>
       
@@ -248,17 +302,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/06/html-css-tap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="OneQixuan">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/1.jpg">
+      <meta itemprop="image" content="/uploads/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -270,7 +320,14 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">tab页面</h1>
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                tab页面
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -296,24 +353,71 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/04/06/html-css-tap/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/04/06/html-css-tap/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
           
-
+             <span id="/2018/04/06/html-css-tap/" class="leancloud_visitors" data-flag-title="tab页面">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
 
+          
+            <div class="post-wordcount">
+               
+                     <span class="post-meta-item-icon">
+                       <i class="fa fa-edit"></i>
+                     </span>
+                 
+                     <span class="post-meta-item-text">字数统计</span>
+                       
+                     <span title="字数统计">
+                        字
+                     </span>
+                  
+                 
+                  <span class="post-meta-divider">|</span>
+                 
+                 
+                 <span class="post-meta-item-icon">
+                     <i class="fa fa-clock-o"></i>
+                     </span>
+                 
+                      <span class="post-meta-item-text">阅读时长</span>
+                 
+                   <span title="阅读时长">
+                  分钟
+                 </span>
+               
+            </div>
+          
           
 
         </div>
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -324,28 +428,81 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=gb2312"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>无标题文档<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">a &#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">color</span>:<span class="selector-id">#000000</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">text-decoration</span><span class="selector-pseudo">:none</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123; <span class="attribute">color</span>:<span class="number">#FFFFFF</span>;&#125;</span></span><br><span class="line"><span class="undefined">ul&#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">list-style</span><span class="selector-pseudo">:none</span>; <span class="comment">/*清除默认项目结构*/</span></span></span><br><span class="line"><span class="css">	<span class="selector-tag">padding</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">margin</span><span class="selector-pseudo">:0px</span>;   </span></span><br><span class="line"><span class="css">	<span class="selector-tag">text-align</span><span class="selector-pseudo">:center</span>; <span class="comment">/*文本居中*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">/*tab</span></span><br><span class="line"><span class="undefined">---------------------------------------------------*/</span></span><br><span class="line"><span class="css"><span class="selector-id">#tab</span>&#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">width</span><span class="selector-pseudo">:920px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">margin</span><span class="selector-pseudo">:0</span> <span class="selector-tag">auto</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">font-szie</span><span class="selector-pseudo">:12px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; <span class="comment">/*隐藏超出区域的部分*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">/*菜单</span></span><br><span class="line"><span class="undefined">--------------------------------------------------*/</span></span><br><span class="line"><span class="css"><span class="selector-class">.Menubox</span> &#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">width</span><span class="selector-pseudo">:100</span>%;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">background</span>: <span class="selector-id">#FFF</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">height</span><span class="selector-pseudo">:28px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">line-height</span><span class="selector-pseudo">:28px</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.Menubox</span> <span class="selector-tag">ul</span>&#123;<span class="attribute">margin</span>:<span class="number">0px</span>; <span class="attribute">padding</span>:<span class="number">0px</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.Menubox</span> <span class="selector-tag">li</span>&#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">display</span><span class="selector-pseudo">:block</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">cursor</span><span class="selector-pseudo">:pointer</span>; <span class="comment">/*定义手型指针*/</span></span></span><br><span class="line"><span class="css">	<span class="selector-tag">width</span><span class="selector-pseudo">:114px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">text-align</span><span class="selector-pseudo">:center</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">color</span><span class="selector-pseudo">:949694</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">font-weight</span><span class="selector-pseudo">:bold</span>; <span class="comment">/*加粗字体*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.Menubox</span> <span class="selector-tag">li</span> <span class="selector-tag">img</span>&#123;<span class="attribute">width</span>:<span class="number">100%</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.Menubox</span> <span class="selector-tag">li</span><span class="selector-class">.hover</span>&#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">padding</span><span class="selector-pseudo">:0px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">background</span>:<span class="selector-id">#ff</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">widows</span><span class="selector-pseudo">:116px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-id">#A8C29F</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">border-bottom</span><span class="selector-pseudo">:none</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">background</span>:<span class="selector-id">#addddd</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">height</span><span class="selector-pseudo">:27px</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">line-height</span><span class="selector-pseudo">:27px</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">&gt;Contentbox&#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">clear</span><span class="selector-pseudo">:both</span>; <span class="comment">/*清除左右浮动元素*/</span></span></span><br><span class="line"><span class="undefined">	margin-top;0px;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-id">#A8C29F</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">border-top</span><span class="selector-pseudo">:none</span>;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">padding-top</span><span class="selector-pseudo">:8px</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.hide</span>&#123;<span class="attribute">display</span>:none&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">setTab</span><span class="params">(cursel,n)</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> menu=<span class="built_in">document</span>.getElementById(<span class="string">"tab_"</span>+i);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> con= <span class="built_in">document</span>.getElementById(<span class="string">"con_"</span>+i);</span></span><br><span class="line"><span class="actionscript">		menu.className=i==cursel?<span class="string">"hover"</span>:<span class="string">""</span>;</span></span><br><span class="line"><span class="actionscript">		con.style.display=i==cursel?<span class="string">"block"</span>:<span class="string">"none"</span>;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span></span><br><span class="line">true<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Menubox"</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"tab_1"</span> <span class="attr">class</span>=<span class="string">"hover"</span> <span class="attr">onclick</span>=<span class="string">"setTab(1,4)"</span>&gt;</span>one<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"tab_2"</span> <span class="attr">onclick</span>=<span class="string">"setTab(2,4)"</span>&gt;</span>two<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"tab_3"</span> <span class="attr">onclick</span>=<span class="string">"setTab(3,4)"</span>&gt;</span>three<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetruetrue<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"tab_4"</span> <span class="attr">onclick</span>=<span class="string">"setTab(4,4)"</span>&gt;</span>four<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">true<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">true<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Contentbox"</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"con_1"</span> <span class="attr">class</span>=<span class="string">"hover"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/1.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"con_2"</span> <span class="attr">class</span>=<span class="string">"hide"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/2.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"con_3"</span> <span class="attr">class</span>=<span class="string">"hide"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/3.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">truetrue<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"con_4"</span> <span class="attr">class</span>=<span class="string">"hide"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/4.jpg"</span> /&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">true<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>		</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
+
+      <div>
+          
+              
+
+          
+      </div>
+    <div>
+      
+        
+
+      
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>客官，赏一个嘛~</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://oova2i5xh.bkt.clouddn.com/wechat.jpg" alt="OneQixuan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://oova2i5xh.bkt.clouddn.com/alipay.jpg" alt="OneQixuan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-    
 
-    
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      OneQixuan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yoursite.com/2018/04/06/html-css-tap/" title="tab页面">http://yoursite.com/2018/04/06/html-css-tap/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/html-css/" rel="tag"># html-css</a>
+            <a href="/tags/html-css/" rel="tag"><i class="fa fa-tag"></i> html-css</a>
           
         </div>
       
 
       
-      
+        
       
 
       
@@ -372,11 +529,8 @@
 
       
       
+
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -392,9 +546,11 @@
 
 
           
-
-  
-
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
 
 
         </div>
@@ -410,78 +566,115 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/1.jpg"
-                alt="OneQixuan" />
-            
-              <p class="site-author-name" itemprop="name">OneQixuan</p>
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="OneQixuan" />
+          <p class="site-author-name" itemprop="name">OneQixuan</p>
+           
               <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
-          
-
         </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/sunshine940326" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5094854684/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/584d7a3e2f301e00572fb7fc" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-group"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/04d2a375a281" target="_blank" title="JianShu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  JianShu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
       </section>
 
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
-	<div id="music163player">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86                       src="//music.163.com/outchain/player?type=2&id=547475529&auto=1&height=66">
-    </iframe>
-</div>
-  </aside>
 
 
         
@@ -490,47 +683,45 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">OneQixuan</span>
-
-  
 </div>
 
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问用户：
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
 
-
-
-
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 访问次数：
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
 
 
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
 
     
 
@@ -559,73 +750,51 @@
 
 
 
-
-
-
-
-
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/canvasline.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/baidu_tools.js?v=5.1.0"></script>
 
 
 
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
   
@@ -654,10 +823,25 @@
 
 
 
+  
 
 
 
 
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt8lab7G';
+      var conf = 'ca667050ec57c6762a854ee31516238f';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 
@@ -670,17 +854,133 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("SXu3fAQtWilv2Jtsr5eHvgCH-gzGzoHsz", "R79G2KT1xhiu9Ngp3Dnjsn7k");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
   
-  
 
-  
-
-  
-
-  
 
 </body>
 </html>
