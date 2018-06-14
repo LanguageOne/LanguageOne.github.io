@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java-swing]]></title>
+    <url>%2F2018%2F06%2F14%2Fjava-swing%2F</url>
+    <content type="text"><![CDATA[图形界面设计Swing组件Swing容器的层次关系 顶层容器(JFrame，JApplet) 根窗格(自动创建，供Swing在后台使用，通常无法在这一层进行操作和处理) 分层窗格(加入分层窗格中的组件可以设置其图层层次，且不会被内容窗格中的对象屏蔽。在分层窗格中的对象可以设置其图层的层次高低，当图像重叠时，层次低的被屏蔽。这一层主要用于管理菜单栏和内层窗格。) 内容窗格(可见组件) 玻璃窗格(产生绘图效果，以及触发窗口程序的各种事件。) 框架类JFrameJFrame的许多方法是从它的父类Frame或Window类、Container类和Component类中继承来的。1234567891011121314151617package swing;import java.awt.*;import javax.swing.*;public class app1 &#123; static JFrame jfrm = new JFrame("这是个Swing程序"); public static void main(String[] args) &#123; JLabel lab = new JLabel("这是一个标签"); Image im = (new ImageIcon("1.jpg")).getImage(); jfrm.setIconImage(im); jfrm.setSize(260,140); jfrm.setBackground(Color.YELLOW); jfrm.setLocation(260, 150); jfrm.add(lab); jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); jfrm.setVisible(true); &#125;&#125; 画板类JPanel画板是一种没有标题栏、没有边框的中间层容器，当然可以利用相应的方法为它添加边框。面板在Swing中用JPanel类实现。1234567891011121314151617181920212223242526package swing;import javax.swing.*;import javax.swing.border.TitledBorder;public class app2 &#123; public static void main(String[] args) &#123; JFrame jfrm = new JFrame("我的框架"); jfrm.setSize(210,180); jfrm.setLocation(500,200); JPanel jpan = new JPanel(); jpan.setSize(120,90); jpan.setLocation(40, 30); JButton bun = new JButton("点击我"); bun.setSize(80,20); bun.setLocation(20, 30); jfrm.setLayout(null); jpan.setLayout(null); jpan.add(bun); jpan.setBorder(new TitledBorder("面板区")); jfrm.add(jpan); jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); jfrm.setVisible(true); &#125;&#125;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[swing]]></title>
     <url>%2F2018%2F06%2F09%2Fswing%2F</url>
     <content type="text"></content>
